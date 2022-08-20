@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #36D1DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.section {
+    position: relative;
+    height: 50px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.section img {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+}
+
+.open.img_left {
+    top: -200%;
+    left: 0%;
+}
+
+.open.img_right {
+    top: -200%;
+    right: 0%;
+}
+
+.close.img_left {
+    top: -300%;
+}
+
+.close.img_right {
+    top: -300%;
+    right: 0;
+}
+
+.close {
+    display: none;
+}
+
+input {
+    padding: 10px 4px 10px 10px;
+    border-color: transparent;
+    border-radius: 2px;
+    min-width: 350px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: 0;
+}
+
+.password:focus-within ~ img {
+    display: block;
+}
